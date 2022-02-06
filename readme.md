@@ -71,3 +71,17 @@
 12. [Remove from string s1, all the characters that are present in string s2.](https://www.geeksforgeeks.org/remove-characters-from-the-first-string-which-are-present-in-the-second-string/) - use hashing
 13. [Check whether two strings are anagram of each other](https://www.geeksforgeeks.org/check-whether-two-strings-are-anagram-of-each-other/)
 14. [Length of the longest substring without repeating characters]()
+
+
+**Sorting**
+
+Sort an Array with two types of elements: ( Best approach is to use quicksort partitioning algorithm ) - O(n) time, O(1) aux space
+ - Segregate negative and positive elements.
+ - Segregate even and odd elements.
+ - Sort a binary array.
+
+Sort an array with three types of elements ( Use Dutch National Flag Algorithm )
+
+ - Sort an array of 0s, 1s, 2s.
+ - Three-way partitioning when multiple occurrences of a pivot may exist.
+ - Partitioning around a range.
