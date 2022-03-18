@@ -1,12 +1,12 @@
-# IPMP-DSA-Prep
+# Standard Data Structures and Algorithms Problems
 
-DSA Concepts:
+DSA Topics:
 
 - [x] Arrays
 - [x] Strings
 - [x] Sorting
 - [x] Searching
-- [ ] Linked List
+- [x] Linked List
 - [ ] Stacks and queues
 - [ ] Hashing
 - [ ] Trees
@@ -20,7 +20,7 @@ DSA Concepts:
 - [ ] Segment and Binary Indexed Trees
 - [ ] Disjoint set
 
-Misc: 
+Others: 
 - [ ] Computational geometry
 - [ ] Math
 
@@ -100,7 +100,7 @@ Misc:
 
 **Sorting**
 
-Sort an Array with two types of elements: ( Best approach is to use quicksort partitioning algorithm ) - O(n) time, O(1) aux space
+Sort an Array with two types of elements: ( Use quicksort partitioning algorithm ) - O(n) time, O(1) aux space
  - Segregate negative and positive elements.
  - Segregate even and odd elements.
  - Sort a binary array.
