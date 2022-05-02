@@ -1,59 +1,45 @@
-// { Driver Code Starts
+/*
+Approach:
+
+1. area = (area of the bar)*(smallest in the right - smallest on the left -1 )
+
+smallest on the right => found while traversing through the array
+smallest on the left => stored in the stack top
+*/
+
 #include <bits/stdc++.h>
 using namespace std;
-
-
- // } Driver Code Ends
 class Solution
 {
     public:
     long long getMaxArea(long long arr[], int n)
     {
-        vector<long long> prev(n), suff(n);
-        stack<long long> prevStk, suffStk;
+        long long max_area = 0, i=0, tp, area;
+        stack<long long> stk;
         
-        for(int i=0;i<n;i++){
-            while(!prevStk.empty() && arr[prevStk.top()]>=arr[i]){
-                prevStk.pop();
-            }
-            if(prevStk.empty()){
-                prev[i]=i;
+        while(i<n){
+            if(stk.empty() || arr[stk.top()] <= arr[i] ){
+                stk.push(i++);
             }
             else{
-                prev[i]=i-prevStk.top()-1;
-            }
-            prevStk.push(i);
-        }
-        
-        for(int i=n-1;i>=0;i--){
-            while(!suffStk.empty() && arr[suffStk.top()]>=arr[i]){
-                suffStk.pop();
-            }
-            if(suffStk.empty()){
-                suff[i]=n-i-1;
-            }
-            else{
-                suff[i]=suffStk.top()-i-1;
-            }
-            suffStk.push(i);
-        }
-        
-        long long maxi = (prev[0]+suff[0]+1)*arr[0], area;
-        
-        for(int i=1;i<n;i++){
-            area = (prev[i]+suff[i]+1)*arr[i];
-            if(area>maxi){
-                maxi = area;
+                tp = stk.top();
+                stk.pop();
+                area = arr[tp]*(stk.empty() ? i : (i - stk.top() - 1));
+                max_area = max(area, max_area);
             }
         }
         
-        return maxi;
-
+        while(!stk.empty()){
+                tp = stk.top();
+                stk.pop();
+                area = arr[tp]*(stk.empty() ? i : (i - stk.top() - 1));
+                max_area = max(area, max_area);           
+        }
+        
+        return max_area;
     }
+    
 };
-
-
-// { Driver Code Starts.
 
 int main()
  {
@@ -74,4 +60,3 @@ int main()
     }
 	return 0;
 }
-  // } Driver Code Ends

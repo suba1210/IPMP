@@ -7,7 +7,7 @@ DSA Topics:
 - [x] Sorting
 - [x] Searching
 - [x] Linked List
-- [ ] Stacks and queues
+- [x] Stacks and queues
 - [ ] Hashing
 - [ ] Trees
 - [ ] Graphs

@@ -13,3 +13,5 @@
 11. [Next Greater Element](https://www.geeksforgeeks.org/next-greater-element/)
 12. [Largest Rectangular Area in a Histogram](https://www.geeksforgeeks.org/largest-rectangle-under-histogram/) - O(n) time and O(n) space
 13. Largest Rectangular Area in a Histogram - O(n) time and O(1) space
+14. [Implement K stacks in an arrays](https://www.geeksforgeeks.org/efficiently-implement-k-stacks-single-array/) - [youtube](https://www.youtube.com/watch?v=S5cYO9k1Ja8)
+15. [Sliding Window Maximum (Maximum of all subarrays of size k)](https://www.geeksforgeeks.org/sliding-window-maximum-maximum-of-all-subarrays-of-size-k/)
