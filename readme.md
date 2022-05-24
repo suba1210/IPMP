@@ -1,4 +1,4 @@
-# Standard Data Structures and Algorithms Problems
+# DSA
 
 DSA Topics:
 
@@ -8,21 +8,22 @@ DSA Topics:
 - [x] Searching
 - [x] Linked List
 - [x] Stacks and queues
-- [ ] Hashing
-- [ ] Trees
-- [ ] Graphs
-- [ ] Greedy and D&C
+- [x] Trees
+- [ ] Bit manipulation
 - [ ] Recursion & Backtracking
 - [ ] Dynamic programming
-- [ ] Bit manipulation
-- [ ] Heap
+- [ ] Graphs
+- [ ] Greedy and D&C
 - [ ] Trie
-- [ ] Segment and Binary Indexed Trees
+- [ ] Heap
+- [ ] Hashing
+- [ ] Matrix
+- [ ] Segment Trees
 - [ ] Disjoint set
 
 Others: 
-- [ ] Computational geometry
 - [ ] Math
+- [ ] Computational geometry
 
 
 **Arrays** 
