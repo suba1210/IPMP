@@ -9,7 +9,7 @@ DSA Topics:
 - [x] Linked List
 - [x] Stacks and queues
 - [x] Trees
-- [ ] Bit manipulation
+- [x] Bit manipulation
 - [ ] Recursion & Backtracking
 - [ ] Dynamic programming
 - [ ] Graphs
