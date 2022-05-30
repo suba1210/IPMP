@@ -10,7 +10,7 @@ DSA Topics:
 - [x] Stacks and queues
 - [x] Trees
 - [x] Bit manipulation
-- [ ] Recursion & Backtracking
+- [x] Recursion & Backtracking
 - [ ] Dynamic programming
 - [ ] Graphs
 - [ ] Greedy and D&C
