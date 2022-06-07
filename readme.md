@@ -4,6 +4,8 @@ DSA Topics:
 
 - [x] Arrays
 - [x] Strings
+- [ ] Hashing
+- [ ] Matrix
 - [x] Sorting
 - [x] Searching
 - [x] Linked List
@@ -13,13 +15,11 @@ DSA Topics:
 - [x] Recursion & Backtracking
 - [ ] Dynamic programming
 - [ ] Graphs
+- [ ] Disjoint set
 - [ ] Greedy and D&C
 - [ ] Trie
 - [ ] Heap
-- [ ] Hashing
-- [ ] Matrix
 - [ ] Segment Trees
-- [ ] Disjoint set
 
 Others: 
 - [ ] Math

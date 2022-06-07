@@ -5,21 +5,17 @@
 using namespace std;
 
 int fib(int n, vector<int>& memo){
-    if(memo[n]==-1){
-        int res;
-        if(n==0 || n==1){
-            return n;
-        }
-        else{
-            res = fib(n-1, memo)+fib(n-2, memo);
-        }
-        memo[n]=res;
+    if(n<=1){
+        return n;
     }
-    return memo[n];
+    if(memo[n]!=-1){
+        return memo[n];
+    }
+    return memo[n] = fib(n-1, memo) + fib(n-2, memo);
 }
 
 int main(){
-	int n = 10;
+	int n = 5;
     vector<int> memo(n+1,-1);
 	cout<<fib(5, memo);
 }

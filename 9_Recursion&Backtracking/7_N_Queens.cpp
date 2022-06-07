@@ -1,3 +1,34 @@
+    // bool isSafe1(int row, int col, vector < string > board, int n) {
+    //   // check upper element
+    //   int duprow = row;
+    //   int dupcol = col;
+
+    //   while (row >= 0 && col >= 0) {
+    //     if (board[row][col] == 'Q')
+    //       return false;
+    //     row--;
+    //     col--;
+    //   }
+
+    //   col = dupcol;
+    //   row = duprow;
+    //   while (col >= 0) {
+    //     if (board[row][col] == 'Q')
+    //       return false;
+    //     col--;
+    //   }
+
+    //   row = duprow;
+    //   col = dupcol;
+    //   while (row < n && col >= 0) {
+    //     if (board[row][col] == 'Q')
+    //       return false;
+    //     row++;
+    //     col--;
+    //   }
+    //   return true;
+    // }
+
 class Solution {
 public:
     void solve(int col, int n, vector<int>& leftRow, vector<int>& lowerDiagonal, vector<int>& upperDiagonal, vector<string>& board, vector<vector<string>>& result){
@@ -6,6 +37,7 @@ public:
             return;
         }
         for(int row=0;row<n;row++){
+            // instead of this 'if' condition we might also use 'isSafe' function
             if(leftRow[row]==0 && lowerDiagonal[row+col]==0 && upperDiagonal[n-1+col-row]==0){
                 board[row][col] = 'Q';
                 leftRow[row] = 1;
