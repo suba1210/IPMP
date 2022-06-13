@@ -16,7 +16,7 @@ DSA Topics:
 - [x] Disjoint set
 - [x] Greedy 
 - [x] D&C
-- [ ] Trie
+- [x] Trie
 - [ ] Heap
 - [ ] Segment Trees
 
