@@ -17,5 +17,5 @@
 
 To do :
 
-- [ ] [Implement a Phone Directory](https://www.geeksforgeeks.org/implement-a-phone-directory/)
+- [ ] [Implement a Phone Directory](https://www.geeksforgeeks.org/implement-a-phone-directory/) - [also](https://youtu.be/DfkLGiW8vNA)
 - [ ] [Find the maximum subarray XOR in a given array](https://www.geeksforgeeks.org/find-the-maximum-subarray-xor-in-a-given-array/)
