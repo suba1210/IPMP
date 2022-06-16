@@ -1,7 +1,5 @@
 # DSA
 
-DSA Topics:
-
 - [x] Arrays
 - [x] Strings
 - [x] Sorting
@@ -17,9 +15,5 @@ DSA Topics:
 - [x] Greedy 
 - [x] D&C
 - [x] Trie
-- [ ] Heap
-- [ ] Segment Trees
-
-Others: 
-- [ ] Math
-- [ ] Computational geometry
+- [x] Heap
+- [x] Segment Trees & Fenwick Trees
