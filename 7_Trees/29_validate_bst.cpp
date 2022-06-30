@@ -1,14 +1,14 @@
-    bool bst(Node*root,int min,int max)
-   {
-       if(root==NULL)
-       return true;
-       
-       if(root->data<min || root->data>max)
-       return false;
-       
-       return bst(root->left,min,root->data)&&bst(root->right,root->data,max);
-   }
-   bool isBST(Node* root) 
-   {
-       return bst(root,INT_MIN,INT_MAX);
-   }
+bool bst(Node *root, int min, int max)
+{
+    if (root == NULL)
+        return true;
+
+    if (root->data < min || root->data > max)
+        return false;
+
+    return bst(root->left, min, root->data) && bst(root->right, root->data, max);
+}
+bool isBST(Node *root)
+{
+    return bst(root, INT_MIN, INT_MAX);
+}

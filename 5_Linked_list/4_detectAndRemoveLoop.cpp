@@ -101,3 +101,40 @@ int main()
 	printList(head);
 	return 0;
 }
+
+
+// fast and slow based solution
+/* 
+class Solution {
+public:
+    ListNode *detectCycle(ListNode *head) {
+        if (head == NULL || head->next == NULL)
+            return NULL;
+    
+        ListNode *slow  = head;
+        ListNode *fast  = head;
+        ListNode *entry = head;
+        ListNode *prev  = NULL;
+
+        while (fast->next && fast->next->next) {
+            slow = slow->next;
+            fast = fast->next->next;
+            if (slow == fast) {                      
+                while(slow != entry) {
+                    prev  = slow;
+                    slow  = slow->next;
+                    entry = entry->next;
+                }
+                prev->next = NULL;
+                
+                while(head!=NULL){
+                    cout<<head->val<<" ";
+                    head = head->next;
+                }
+            }
+        }
+        return NULL;           
+    }
+};
+
+*/

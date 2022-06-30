@@ -1,37 +1,22 @@
-class Solution {
-  public:
-    vector<int> printNearNodes(Node *root, int low, int high) {
-        Node* curr = root;
-        vector<int> result;
-        
-        while(curr!=NULL){
-            if(curr->left==NULL){
-                if(curr->data >=low && curr->data <= high){
-                    result.push_back(curr->data);
-                }
-                curr=curr->right;
-            }
-            else{
-                Node* prev = curr->left;
-                
-                while(prev->right && prev->right != curr){
-                    prev = prev->right;
-                }
-                
-                if(prev->right==NULL){
-                    prev->right = curr;
-                    curr = curr->left;
-                }
-                else{
-                    if(curr->data >=low && curr->data <= high){
-                        result.push_back(curr->data);
-                    }
-                    prev->right=NULL;
-                    curr=curr->right;
-                }
-            }
-        }
-        
-        return result;
-    }
-};
+void Print(node *root, int k1, int k2)
+{
+    /* base case */
+    if ( NULL == root )
+        return;
+     
+    /* Since the desired o/p is sorted,
+        recurse for left subtree first
+        If root->data is greater than k1,
+        then only we can get o/p keys
+        in left subtree */
+    if ( k1 < root->data )
+        Print(root->left, k1, k2);
+     
+    /* if root's data lies in range,
+    then prints root's data */
+    if ( k1 <= root->data && k2 >= root->data )
+        cout<<root->data<<" ";
+     
+    /* recursively call the right subtree */
+   Print(root->right, k1, k2);
+}

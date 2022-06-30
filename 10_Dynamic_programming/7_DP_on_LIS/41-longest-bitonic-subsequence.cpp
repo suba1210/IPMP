@@ -23,6 +23,6 @@ class Solution{
         for(int i=0;i<nums.size();i++){
             maxi = max(maxi, dp1[i] + dp2[i]);
         }       
-        return maxi-1;       
+        return maxi-1; // subtarcting 1 because middle element amy be repeated
 	}
 };

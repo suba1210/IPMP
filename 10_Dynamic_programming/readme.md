@@ -37,14 +37,14 @@
 18. [Target Sum](https://leetcode.com/problems/target-sum/) - [also](https://takeuforward.org/data-structure/target-sum-dp-21/)
 19. [Coin chamge II](https://leetcode.com/problems/coin-change-2)
 20. [Unbounded Knapsack (Repetition of items allowed)](https://www.geeksforgeeks.org/unbounded-knapsack-repetition-items-allowed/)
-21. [Rod cutting problem](https://www.geeksforgeeks.org/cutting-a-rod-dp-13/)
+21. [Rod cutting problem](https://www.geeksforgeeks.org/cutting-a-rod-dp-13/) => same technique as unbounded knapsack
 
 **DP on Strings**
 
 22. [Longest Common Subsequence](https://leetcode.com/problems/longest-common-subsequence/)
 23. [Print the Longest Common Subsequence](https://takeuforward.org/data-structure/print-longest-common-subsequence-dp-26/)
 24. [Longest Common Substring](https://www.geeksforgeeks.org/longest-common-substring-dp-29/) - [also](https://takeuforward.org/data-structure/longest-common-substring-dp-27/)
-25. [Longest Palindromic Subsequence](https://leetcode.com/problems/longest-palindromic-subsequence/)
+25. [Longest Palindromic Subsequence](https://leetcode.com/problems/longest-palindromic-subsequence/) => lcs of a string and its reverse
 26. [Minimum Insertions to Make String Palindrome](https://leetcode.com/problems/minimum-insertion-steps-to-make-a-string-palindrome/) => length of the string - length of Longest Palindromic Subsequence
 27. [Delete Operation for Two Strings](https://leetcode.com/problems/delete-operation-for-two-strings/) => (length of string1 + length of string 2) - (2*length of lcs)
 28. [Shortest Common Supersequence](https://leetcode.com/problems/shortest-common-supersequence/) => length = (length of string1 + length of string 2) - (length of lcs)
@@ -65,7 +65,7 @@
 
 38. [Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/)
 39. [Largest Divisible Subset](https://leetcode.com/problems/largest-divisible-subset/)
-40. [Longest String Chain](https://leetcode.com/problems/longest-string-chain/) => to do
+40. [Longest String Chain](https://leetcode.com/problems/longest-string-chain/)
 41. [Longest Bitonic subsequence](https://practice.geeksforgeeks.org/problems/longest-bitonic-subsequence0824/1/)
 42. [Number of Longest Increasing Subsequence](https://leetcode.com/problems/number-of-longest-increasing-subsequence/)
 

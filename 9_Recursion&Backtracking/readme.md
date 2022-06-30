@@ -11,4 +11,4 @@
 9. [M Coloring problem](https://practice.geeksforgeeks.org/problems/m-coloring-problem-1587115620/1)
 10. [Palindrome Partition](https://leetcode.com/problems/palindrome-partitioning/)
 11. [Rat in a maze](https://practice.geeksforgeeks.org/problems/rat-in-a-maze-problem/1#)
-12. Kth permutation - to do 😥
+12. [Kth permutation](https://leetcode.com/problems/permutation-sequence/submissions/)

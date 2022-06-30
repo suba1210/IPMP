@@ -11,9 +11,9 @@ int partition(int arr[], int lb, int ub){
             i++;
             swap(arr[i],arr[j]);
         }
-        swap(arr[ub], arr[i+1]);
-        return i+1; 
     }
+    swap(arr[ub], arr[i+1]);
+    return i+1; 
 }
 
 void quickSort(int arr[], int lb, int ub)

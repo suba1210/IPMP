@@ -15,7 +15,7 @@
 13. [Difference between sums of odd level and even level nodes of a Binary Tree](https://www.geeksforgeeks.org/difference-between-sums-of-odd-and-even-levels/)
 14. [Check if all leaves are at same level](https://www.geeksforgeeks.org/check-leaves-level/)
 15. [Write a program to Delete a Tree](https://www.geeksforgeeks.org/write-a-c-program-to-delete-a-tree/)
-16. [Zig Zag tree traversal](https://www.geeksforgeeks.org/zigzag-tree-traversal/)
+16. [Zig Zag tree traversal](https://www.geeksforgeeks.org/zigzag-tree-traversal/) - same as spiral traversal
 17. [Boundary Traversal of binary tree](https://www.geeksforgeeks.org/boundary-traversal-of-binary-tree/)
 18. [Count Leaves in the binary tree](https://www.geeksforgeeks.org/write-a-c-program-to-get-count-of-leaf-nodes-in-a-binary-tree/)
 19. [Lowest Common Ancestor in a BINARY Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/solution/) - [youtube](https://www.youtube.com/watch?v=_-QHfMDde90)
@@ -59,7 +59,7 @@
 57. [Construct a special Binary tree from preorder traversal](https://www.geeksforgeeks.org/construct-a-special-tree-from-given-preorder-traversal/)
 58. [Construct a binary tree from given ancestor matrix](https://www.geeksforgeeks.org/construct-tree-from-ancestor-matrix/)
 59. [Largest BST subtree](https://www.youtube.com/watch?v=X0oXMdtUDwo)
-
+60. Delete a node in bst
 
 
 TO DOS:

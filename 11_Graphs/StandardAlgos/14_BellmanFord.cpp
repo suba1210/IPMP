@@ -1,91 +1,51 @@
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 using namespace std;
-
-struct Edge {
-	int src, dest, weight;
+struct node {
+    int u;
+    int v;
+    int wt; 
+    node(int first, int second, int weight) {
+        u = first;
+        v = second;
+        wt = weight;
+    }
 };
 
-struct Graph {
-	int V, E;
-	struct Edge* edge;
-};
-
-struct Graph* createGraph(int V, int E)
-{
-	struct Graph* graph = new Graph;
-	graph->V = V;
-	graph->E = E;
-	graph->edge = new Edge[E];
-	return graph;
-}
-
-void printArr(int dist[], int n)
-{
-	printf("Vertex Distance from Source\n");
-	for (int i = 0; i < n; ++i)
-		printf("%d \t\t %d\n", i, dist[i]);
-}
-
-void BellmanFord(struct Graph* graph, int src)
-{
-	int V = graph->V;
-	int E = graph->E;
-	int dist[V];
-
-	for (int i = 0; i < V; i++)
-		dist[i] = INT_MAX;
-	dist[src] = 0;
-
-	for (int i = 1; i <= V - 1; i++) {
-		for (int j = 0; j < E; j++) {
-			int u = graph->edge[j].src;
-			int v = graph->edge[j].dest;
-			int weight = graph->edge[j].weight;
-			if (dist[u] != INT_MAX && dist[u] + weight < dist[v])
-				dist[v] = dist[u] + weight;
-		}
-	}
-
-
-	for (int i = 0; i < E; i++) {
-		int u = graph->edge[i].src;
-		int v = graph->edge[i].dest;
-		int weight = graph->edge[i].weight;
-		if (dist[u] != INT_MAX
-			&& dist[u] + weight < dist[v]) {
-			printf("Graph contains negative weight cycle");
-			return; 
-		}
-	}
-
-	printArr(dist, V);
-
-	return;
-}
-
-int main()
-{
-	int V; 
-	int E = 8; 
-    cout<<"\nEnter the number of vertices : ";
-    cin>>V;
-
-    cout<<"\nEnter the number of edges : ";
-    cin>>E;
-	struct Graph* graph = createGraph(V, E);
-
-    cout<<"\nEnter the edges of the graph : ";
-
-    for(int i=0;i<E;i++){
-        cout<<"\nSource, destination, weight of edge "<<i+1<<" : ";
-        int x,y,z;
-        cin>>x>>y>>z;
-	    graph->edge[i].src = x;
-	    graph->edge[i].dest = y;
-	    graph->edge[i].weight = z;        
+int main(){
+    int N=6,m=7;
+    vector<node> edges; 
+	edges.push_back(node(0,1,5));
+	edges.push_back(node(1,2,-2));
+	edges.push_back(node(1,5,-3));
+	edges.push_back(node(2,4,3));
+	edges.push_back(node(3,2,6));
+	edges.push_back(node(3,4,-2));
+	edges.push_back(node(5,3,1));
+    int src=0;
+    int inf = 10000000; 
+    vector<int> dist(N, inf); 
+    dist[src] = 0; 
+    for(int i = 1;i<=N-1;i++) {
+        for(auto it: edges) {
+            if(dist[it.u] + it.wt < dist[it.v]) {
+                dist[it.v] = dist[it.u] + it.wt; 
+            }
+        }
     }
 
-	BellmanFord(graph, 0);
-
-	return 0;
+    int fl = 0; 
+    for(auto it: edges) {
+        if(dist[it.u] + it.wt < dist[it.v]) {
+            cout << -1; 
+            fl = 1; 
+            break; 
+        }
+    }
+    
+    if(!fl) {
+        for(int i = 0;i<N;i++) {
+            cout << dist[i]<<" ";
+        }
+    }
+    return 0;
 }

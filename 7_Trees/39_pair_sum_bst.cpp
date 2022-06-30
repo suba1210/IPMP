@@ -1,22 +1,52 @@
-    int func(Node* root, int target, set<int>& s){
-        if(root==NULL){
-            return 0;
+class BSTIterator { // two pointers technique using BST iterator
+    stack<TreeNode *> myStack;
+    bool reverse = true; 
+public:
+    BSTIterator(TreeNode *root, bool isReverse) {
+        reverse = isReverse; 
+        pushAll(root);
+    }
+
+    /** @return whether we have a next smallest number */
+    bool hasNext() {
+        return !myStack.empty();
+    }
+
+    /** @return the next smallest number */
+    int next() {
+        TreeNode *tmpNode = myStack.top();
+        myStack.pop();
+        if(!reverse) pushAll(tmpNode->right);
+        else pushAll(tmpNode->left);
+        return tmpNode->val;
+    }
+
+private:
+    void pushAll(TreeNode *node) {
+        for(;node != NULL; ) {
+             myStack.push(node);
+             if(reverse == true) {
+                 node = node->right; 
+             } else {
+                 node = node->left; 
+             }
         }
-        int left = func(root->left, target, s);
-        if(left==1)
-            return 1;
-            
-        if(s.find(target-(root->data)) != s.end())
-            return 1;
-        else
-            s.insert(root->data);
-            
-        return func(root->right, target, s);
-            
     }
-    
-    int isPairPresent(struct Node *root, int target)
-    {
-        set<int> s;
-        return func(root, target, s);
+};
+class Solution {
+public:
+    bool findTarget(TreeNode* root, int k) {
+        if(!root) return false; 
+        BSTIterator l(root, false); 
+        BSTIterator r(root, true); 
+        
+        int i = l.next(); 
+        int j = r.next(); 
+        while(i<j) {
+            if(i + j == k) return true; 
+            else if(i + j < k) i = l.next(); 
+            else j = r.next(); 
+        }
+        return false; 
     }
+};

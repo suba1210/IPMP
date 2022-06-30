@@ -1,11 +1,11 @@
 // recursion
 class Solution {
 public:
-    int minOfAllPaths(int row, int col, int rowSize, int colSize, vector<vector<int>>& triangle){
+    int minOfAllPaths(int row, int col, int rowSize, vector<vector<int>>& triangle){
         if(row==rowSize-1)
             return triangle[row][col];        
-        int down = triangle[row][col] + minOfAllPaths(row+1, col, rowSize, colSize, triangle);  
-        int diagonalRight = triangle[row][col] + minOfAllPaths(row+1, col+1, rowSize, colSize, triangle);
+        int down = triangle[row][col] + minOfAllPaths(row+1, col, rowSize, triangle);  
+        int diagonalRight = triangle[row][col] + minOfAllPaths(row+1, col+1, rowSize, triangle);
         return min(down, diagonalRight);
     }
     int minimumTotal(vector<vector<int>>& triangle) {
@@ -19,11 +19,11 @@ public:
 // memoization
 class Solution {
 public:
-    int minOfAllPaths(int row, int col, int rowSize, int colSize, vector<vector<int>>& triangle,  vector<vector<int>> dp){
+    int minOfAllPaths(int row, int col, int rowSize, vector<vector<int>>& triangle,  vector<vector<int>> dp){
         if(row==rowSize-1)
             return dp[row][col] = triangle[row][col];        
-        int down = triangle[row][col] + minOfAllPaths(row+1, col, rowSize, colSize, triangle, dp);  
-        int diagonalRight = triangle[row][col] + minOfAllPaths(row+1, col+1, rowSize, colSize, triangle, dp);
+        int down = triangle[row][col] + minOfAllPaths(row+1, col, rowSize, triangle, dp);  
+        int diagonalRight = triangle[row][col] + minOfAllPaths(row+1, col+1, rowSize, triangle, dp);
         return dp[row][col] = min(down, diagonalRight);
     }
     int minimumTotal(vector<vector<int>>& triangle) {
@@ -40,7 +40,7 @@ class Solution {
 public:    
     int minimumTotal(vector<vector<int>>& triangle) {
         int row = triangle.size();
-        vector<vector<int>> dp(row, vector<int>(row, -1));
+        vector<vector<int>> dp(row, vector<int>(row, 0));
         
         for(int i=row-1;i>=0;i--){
             for(int j=0;j<triangle[i].size();j++){

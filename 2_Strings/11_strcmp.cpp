@@ -6,14 +6,14 @@ int ic_strcmp(string s1, string s2)
     int i;
     for (i = 0; s1[i] && s2[i]; ++i)
     {
-        if (s1[i] == s2[i] || (s1[i] ^ 32) == s2[i])
+        if (s1[i] == s2[i] || (s1[i] ^ 32) == s2[i]) // check if upper case and lower case are equal
             continue;
         else
             break;
     }  
     if (s1[i] == s2[i])
         return 0;
-    if ((s1[i] | 32) < (s2[i] | 32))
+    if ((s1[i] | 32) < (s2[i] | 32)) // doing | operation converts it to lower case
         return -1;
     return 1;
 }

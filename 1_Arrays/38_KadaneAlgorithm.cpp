@@ -5,7 +5,7 @@ int maxSubArraySum(int arr[],int n)
 {
     int curr = arr[0],res=arr[0],i;
 
-    for(i=0;i<n;i++)
+    for(i=1;i<n;i++)
     {
         curr = max(arr[i],curr+arr[i]);
         res = max(res,curr);

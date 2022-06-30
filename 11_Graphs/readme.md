@@ -18,7 +18,7 @@
 10. [Max Area of Island](https://leetcode.com/problems/max-area-of-island/) - dfs
 11. [Number of Closed Islands](https://leetcode.com/problems/number-of-closed-islands/) - dfs
 12. [Number of Enclaves](https://leetcode.com/problems/number-of-enclaves/) - dfs
-13. [As far from Land as possible](https://leetcode.com/problems/as-far-from-land-as-possible/) - bfs
+13. [As far from Land as possible](https://leetcode.com/problems/as-far-from-land-as-possible/) - [explanation](https://leetcode.com/problems/as-far-from-land-as-possible/discuss/360963/)
 14. [Pacific Atlantic Water Flow](https://leetcode.com/problems/pacific-atlantic-water-flow/) 
 15. [Shortest Path in Binary Matrix](https://leetcode.com/problems/shortest-path-in-binary-matrix/)
 16. [01 Matrix](https://leetcode.com/problems/01-matrix/)

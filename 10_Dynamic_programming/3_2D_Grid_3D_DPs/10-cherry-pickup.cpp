@@ -87,7 +87,7 @@ public:
     {
         int row = grid.size();
         int col = grid[0].size();
-        vector<vector<vector<int>>> dp(row, vector<vector<int>>(col, vector<int>(col, -1)));
+        vector<vector<vector<int>>> dp(row, vector<vector<int>>(col, vector<int>(col, 0)));
         for (int i = row - 1; i >= 0; i--)
         {
             for (int j1 = 0; j1 < col; j1++)

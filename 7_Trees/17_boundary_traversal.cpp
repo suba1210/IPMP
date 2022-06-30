@@ -1,116 +1,113 @@
-#include <iostream>
+#include <bits/stdc++.h>
+
 using namespace std;
 
-/* A binary tree node has data, pointer to left child
-and a pointer to right child */
-struct Node {
+struct node
+{
 	int data;
-	struct Node *left, *right;
+	struct node *left, *right;
 };
 
-// Utility function to create a new tree node
-Node* newNode(int data)
+bool isLeaf(node *root)
 {
-	Node* temp = new Node;
-	temp->data = data;
-	temp->left = temp->right = nullptr;
-	return temp;
+	return !root->left && !root->right;
 }
 
-// A simple function to print leaf nodes of a binary tree
-void printLeaves(Node* root)
+void addLeftBoundary(node *root, vector<int> &res)
 {
-	if (root == nullptr)
-		return;
-
-	printLeaves(root->left);
-
-	// Print it if it is a leaf node
-	if (!(root->left) && !(root->right))
-		cout << root->data << " ";
-
-	printLeaves(root->right);
-}
-
-// A function to print all left boundary nodes, except a
-// leaf node. Print the nodes in TOP DOWN manner
-void printBoundaryLeft(Node* root)
-{
-	if (root == nullptr)
-		return;
-
-	if (root->left) {
-
-		// to ensure top down order, print the node
-		// before calling itself for left subtree
-		cout << root->data << " ";
-		printBoundaryLeft(root->left);
+	node *cur = root->left;
+	while (cur)
+	{
+		if (!isLeaf(cur))
+			res.push_back(cur->data);
+		if (cur->left)
+			cur = cur->left;
+		else
+			cur = cur->right;
 	}
-	else if (root->right) {
-		cout << root->data << " ";
-		printBoundaryLeft(root->right);
-	}
-	// do nothing if it is a leaf node, this way we avoid
-	// duplicates in output
 }
-
-// A function to print all right boundary nodes, except a
-// leaf node Print the nodes in BOTTOM UP manner
-void printBoundaryRight(Node* root)
+void addRightBoundary(node *root, vector<int> &res)
 {
-	if (root == nullptr)
-		return;
-
-	if (root->right) {
-		// to ensure bottom up order, first call for right
-		// subtree, then print this node
-		printBoundaryRight(root->right);
-		cout << root->data << " ";
+	node *cur = root->right;
+	vector<int> tmp;
+	while (cur)
+	{
+		if (!isLeaf(cur))
+			tmp.push_back(cur->data);
+		if (cur->right)
+			cur = cur->right;
+		else
+			cur = cur->left;
 	}
-	else if (root->left) {
-		printBoundaryRight(root->left);
-		cout << root->data << " ";
+	for (int i = tmp.size() - 1; i >= 0; --i)
+	{
+		res.push_back(tmp[i]);
 	}
-	// do nothing if it is a leaf node, this way we avoid
-	// duplicates in output
 }
 
-// A function to do boundary traversal of a given binary
-// tree
-void printBoundary(Node* root)
+void addLeaves(node *root, vector<int> &res)
 {
-	if (root == nullptr)
+	if (isLeaf(root))
+	{
+		res.push_back(root->data);
 		return;
-
-	cout << root->data << " ";
-
-	// Print the left boundary in top-down manner.
-	printBoundaryLeft(root->left);
-
-	// Print all leaf nodes
-	printLeaves(root->left);
-	printLeaves(root->right);
-
-	// Print the right boundary in bottom-up manner
-	printBoundaryRight(root->right);
+	}
+	if (root->left)
+		addLeaves(root->left, res);
+	if (root->right)
+		addLeaves(root->right, res);
 }
 
-// Driver program to test above functions
+vector<int> printBoundary(node *root)
+{
+	vector<int> res;
+	if (!root)
+		return res;
+
+	if (!isLeaf(root))
+		res.push_back(root->data);
+
+	addLeftBoundary(root, res);
+
+	// add leaf nodes
+	addLeaves(root, res);
+
+	addRightBoundary(root, res);
+	return res;
+}
+
+struct node *newNode(int data)
+{
+	struct node *node = (struct node *)malloc(sizeof(struct node));
+	node->data = data;
+	node->left = NULL;
+	node->right = NULL;
+
+	return (node);
+}
+
 int main()
 {
-	// Let us construct the tree given in the above diagram
-	Node* root = newNode(20);
-	root->left = newNode(8);
-	root->left->left = newNode(4);
-	root->left->right = newNode(12);
-	root->left->right->left = newNode(10);
-	root->left->right->right = newNode(14);
-	root->right = newNode(22);
-	root->right->right = newNode(25);
 
-	printBoundary(root);
+	struct node *root = newNode(1);
+	root->left = newNode(2);
+	root->left->left = newNode(3);
+	root->left->left->right = newNode(4);
+	root->left->left->right->left = newNode(5);
+	root->left->left->right->right = newNode(6);
+	root->right = newNode(7);
+	root->right->right = newNode(8);
+	root->right->right->left = newNode(9);
+	root->right->right->left->left = newNode(10);
+	root->right->right->left->right = newNode(11);
 
+	vector<int> boundaryTraversal;
+	boundaryTraversal = printBoundary(root);
+
+	cout << "The Boundary Traversal is : ";
+	for (int i = 0; i < boundaryTraversal.size(); i++)
+	{
+		cout << boundaryTraversal[i] << " ";
+	}
 	return 0;
 }
-
-// This code is contributed by Aditya Kumar (adityakumar129)

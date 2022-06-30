@@ -24,7 +24,7 @@ public:
     }
     int minCut(string s) {
         int n = s.length();
-        return allCuts(0, n, s) - 1; // inorder not to consider the partition done at last position
+        return allCuts(0, n, s) - 1; // don't consider the partition done at last position that's why - 1
     }
 };
 

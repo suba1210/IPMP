@@ -9,7 +9,8 @@ void DFS(vector<int> adj[], int u,stack<int> &st, bool visited[])
         if(visited[v]==false)
             DFS(adj,v,st,visited);
     }
-    st.push(u);
+    st.push(u); //A vertex is pushed to stack only when all of its adjacent vertices (and their adjacent vertices and so on) are already in stack.
+
 }
 
 void topologicalSort(vector<int> adj[], int V) 

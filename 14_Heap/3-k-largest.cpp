@@ -15,8 +15,7 @@ class Solution
                 pq.push(arr[i]);
             }
         }
-        
-        
+                
         vector<int> result;
         while(!pq.empty()){
             result.push_back(pq.top());

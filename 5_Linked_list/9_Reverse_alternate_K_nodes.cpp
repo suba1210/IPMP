@@ -1,3 +1,4 @@
+// see leetcode submission for this problem
 // Approach:
 // -> reverse the first k nodes
 // -> for head->next, we first assign NULL, then we re assign it by calling a function

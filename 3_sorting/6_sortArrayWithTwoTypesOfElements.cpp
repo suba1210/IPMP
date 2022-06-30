@@ -4,9 +4,9 @@ using namespace std;
 void segregatePosNeg(int arr[], int n){
     int start=0, end=n-1;
     while(start<end){
-        while(arr[start]<=0)
+        while(arr[start]<0)
             start++;
-        while(arr[end]>0)
+        while(arr[end]>=0)
             end--;
         if(start<end)
             swap(arr[start],arr[end]);

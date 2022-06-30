@@ -81,13 +81,13 @@ public:
         extractMin();
     }
 
-    // void build_heap(int arr[],int n)
-    // {
-    //     for(int i = n/2 -1;i>=0;i--)
-    //     {
-    //         heapify(arr,n,i);
-    //     }
-    // }
+    void build_heap(int arr[],int n)
+    {
+        for(int i = n/2-1; i>=0; i--)
+        {
+            heapify(arr,n,i);
+        }
+    }
 };
 
 int main()

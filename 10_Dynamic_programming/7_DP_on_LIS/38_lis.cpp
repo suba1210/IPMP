@@ -1,3 +1,5 @@
+// refer notes for printing LIS
+
 // recursion
 class Solution {
 public:
@@ -78,7 +80,7 @@ public:
 class Solution {
 public:
     int lengthOfLIS(vector<int>& nums) {
-        vector<int> dp(nums.size(), 1), count(nums.size(), 1);       
+        vector<int> dp(nums.size(), 1);       
         for(int i=0;i<nums.size();i++){
             for(int prev=0;prev<i;prev++){
                 if(nums[prev] < nums[i] && (1 + dp[prev]) > dp[i]){

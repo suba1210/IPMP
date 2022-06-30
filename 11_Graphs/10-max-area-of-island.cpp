@@ -22,7 +22,7 @@ public:
         for(int i=0;i<row;i++){
             for(int j=0;j<col;j++){
                 if(grid[i][j]==1){
-                    maxi = max(maxi, dfs(i, j, grid));
+                    maxi = max(maxi, 1 + dfs(i, j, grid)); // add 1 to consider current cell
                 }
             }
         }
@@ -30,6 +30,6 @@ public:
         if(maxi==INT_MIN)
             return 0;
         else
-            return maxi+1;
+            return maxi;
     }
 };

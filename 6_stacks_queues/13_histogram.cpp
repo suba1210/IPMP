@@ -1,49 +1,36 @@
-// { Driver Code Starts
 #include <bits/stdc++.h>
 using namespace std;
-
-
- // } Driver Code Ends
 class Solution
 {
-    public:
-    long long getMaxArea(long long arr[], int n)
+public:
+    int largestRectangleArea(vector<int> &histo)
     {
-        stack<long long> s;
-        long long i=0, top, area, max_area = 0;
-
-        while(i<n){
-            if(s.empty() || arr[s.top()]<=arr[i]){
-                s.push(i++);
+        stack<int> st;
+        int maxA = 0;
+        int n = histo.size();
+        for (int i = 0; i <= n; i++)
+        {
+            while (!st.empty() && (i == n || histo[st.top()] >= histo[i]))
+            {
+                int height = histo[st.top()];
+                st.pop();
+                int width;
+                if (st.empty())
+                    width = i;
+                else
+                    width = i - st.top() - 1;
+                maxA = max(maxA, width * height);
             }
-            else{
-                top = s.top();
-                s.pop();
-            }
+            st.push(i);
         }
+        return maxA;
     }
 };
 
-
-// { Driver Code Starts.
-
 int main()
- {
-    long long t;
-
-    cin>>t;
-    while(t--)
-    {
-        int n;
-        cin>>n;
-        
-        long long arr[n];
-        for(int i=0;i<n;i++)
-            cin>>arr[i];
-        Solution ob;
-        cout<<ob.getMaxArea(arr, n)<<endl;
-    
-    }
-	return 0;
+{
+    vector<int> histo = {2, 1, 5, 6, 2, 3, 1};
+    Solution obj;
+    cout << "The largest area in the histogram is " << obj.largestRectangleArea(histo) << endl;
+    return 0;
 }
-  // } Driver Code Ends

@@ -2,9 +2,9 @@
 class Solution {
 public:
     int allWays(int i, int j, string s, string t){
-        if(j<0)
+        if(j<0) // we have matched all the characters of s2
             return 1;
-        if(i<0)
+        if(i<0) // we have used all charcters of s1 but still couldn't find a match for s2
             return 0;
         if(s[i]==t[j])
             return allWays(i-1, j-1, s, t) + allWays(i-1, j, s, t);

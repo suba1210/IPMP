@@ -19,9 +19,10 @@
 17. [Swap Kth node from beginning with Kth node from end in a Linked List](https://www.geeksforgeeks.org/swap-kth-node-from-beginning-with-kth-node-from-end-in-a-linked-list/)
 18. [Delete N nodes after M nodes of a linked list](https://www.geeksforgeeks.org/delete-n-nodes-after-m-nodes-of-a-linked-list/)
 19. [Flattening a Linked List](https://www.geeksforgeeks.org/flattening-a-linked-list/)
+20. [Starting point of cycle](https://youtu.be/QfbOhn0WZ88)
 
 To do:
 
-- [ ] [Clone a linked list with next and random pointer](https://www.geeksforgeeks.org/a-linked-list-with-next-and-arbit-pointer/)
+- [x] [Clone a linked list with next and random pointer](https://www.geeksforgeeks.org/a-linked-list-with-next-and-arbit-pointer/) - [youtube](https://youtu.be/VNf6VynfpdM)
 - [ ] [Memory efficient DLL using XOR => creation](https://www.geeksforgeeks.org/xor-linked-list-a-memory-efficient-doubly-linked-list-set-1/)
 - [ ] [Memory efficient DLL using XOR => insertion, deletion](https://www.geeksforgeeks.org/xor-linked-list-a-memory-efficient-doubly-linked-list-set-2/)

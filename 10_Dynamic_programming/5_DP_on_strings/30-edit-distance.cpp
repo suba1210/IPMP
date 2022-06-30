@@ -1,11 +1,16 @@
 // recursion
 class Solution {
 public:
+
+    // return 1+f(i-1,j) Insertion of character.
+    // return 1+f(i,j-1) Deletion of character.
+    // return 1+f(i-1,j-1) Replacement of character.
+
     int allWays(int i, int j, string word1, string word2){
         if(i<0)
-            return j+1;
+            return j+1; // if word1 gets exhausted insert j+1 characters
         if(j<0)
-            return i+1;
+            return i+1; // if word2 gets exhausted delete i+1 characters
         if(word1[i]==word2[j])
             return allWays(i-1, j-1, word1, word2);
         return min(1+allWays(i-1, j-1, word1, word2), min(1+allWays(i, j-1, word1, word2), 1 + allWays(i-1, j, word1, word2)));

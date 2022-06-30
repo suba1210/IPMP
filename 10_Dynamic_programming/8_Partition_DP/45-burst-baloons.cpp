@@ -54,12 +54,12 @@ public:
         for(int i=size;i>=1;i--){
             for(int j=1;j<=size;j++){
                 if(i>j) continue;
-                    int maxi = INT_MIN;
-                    for(int index = i;index<=j;index++){
-                        int cost = nums[i-1]*nums[index]*nums[j+1] + dp[i][index-1] + dp[index+1][j];
-                        maxi = max(maxi, cost);
-                    }
-                    dp[i][j] = maxi;                    
+                int maxi = INT_MIN;
+                for(int index = i;index<=j;index++){
+                    int cost = nums[i-1]*nums[index]*nums[j+1] + dp[i][index-1] + dp[index+1][j];
+                    maxi = max(maxi, cost);
+                }
+                dp[i][j] = maxi;                    
             }
         }
         return dp[1][size];

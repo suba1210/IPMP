@@ -1,37 +1,35 @@
-class Solution {
-public:
-    
-    bool func(TreeNode* root, int limit, int sum){
-        if(root==NULL)
-            return false;
-        if(root->left==NULL && root->right==NULL){
-            if(sum+root->val >= limit)
-                return true;
-            return false;
-        }
-        
-        bool left = func(root->left, limit, sum+root->val);
-        bool right = func(root->right, limit, sum+root->val);
-        
-        if(!left)
-            root->left = NULL;
-        if(!right)
-            root->right = NULL;
-        
-        if(left || right)
-            return true;
-        
-        return false;
-    }
-    
-    TreeNode* sufficientSubset(TreeNode* root, int limit) {
-        if(root==NULL)
-            return NULL;
-        bool ans = func(root, limit, 0);
-            
-        if(ans)
-            return root;
-        else
-            return NULL;
-    }
-};
+/* Main function which truncates the binary tree. */
+struct Node *pruneUtil(struct Node *root, int k, int *sum)
+{
+	// Base Case
+	if (root == NULL) return NULL;
+
+	// Initialize left and right sums as sum from root to
+	// this node (including this node)
+	int lsum = *sum + (root->data);
+	int rsum = lsum;
+
+	// Recursively prune left and right subtrees
+	root->left = pruneUtil(root->left, k, &lsum);
+	root->right = pruneUtil(root->right, k, &rsum);
+
+	// Get the maximum of left and right sums
+	*sum = max(lsum, rsum);
+
+	// If maximum is smaller than k, then this node
+	// must be deleted
+	if (*sum < k)
+	{
+		free(root);
+		root = NULL;
+	}
+
+	return root;
+}
+
+// A wrapper over pruneUtil()
+struct Node *prune(struct Node *root, int k)
+{
+	int sum = 0;
+	return pruneUtil(root, k, &sum);
+}

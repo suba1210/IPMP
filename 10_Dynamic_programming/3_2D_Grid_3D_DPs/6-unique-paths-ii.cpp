@@ -5,7 +5,7 @@ class Solution
 public:
     int allPaths(int row, int col, vector<vector<int>> &grid)
     {
-        if (grid[row][col] == 1)
+        if (grid[row][col] == 1) // consider edge case when [[1]] no possible moves/paths
             return 0; // that is why this condition is above row==0 col==0 condition
         if (row == 0 && col == 0)
             return 1;
@@ -23,7 +23,7 @@ public:
     }
 };
 
-// memoization => TC = O(N*M) , SC = O(N*M) + ( O(path-length) == (O(n-1)(m-1)) )
+// memoization => TC = O(N*M) , SC = O(N*M) + ( O(path length) == (O(n-1)(m-1)) )
 class Solution
 {
 public:

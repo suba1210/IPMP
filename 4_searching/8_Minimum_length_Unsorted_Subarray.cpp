@@ -29,7 +29,7 @@ void printUnsorted(int arr[], int size){
     int min = start_of_unsorted;
     int max = end_of_unsorted;
 
-    // find min and max from s to e
+    // find min and max from start_of_unsorted to end_of_unsorted
     for(int i=start_of_unsorted; i<=end_of_unsorted;i++){
         if(arr[i]>max){
             max=arr[i];
@@ -39,17 +39,17 @@ void printUnsorted(int arr[], int size){
         }
     }
 
-    //find 0 to s-1 if smthing less than min, if so expand s
+    //find 0 to s-1 if smthing greater than min, if so expand start_of_unsorted
     for(int i=0;i<start_of_unsorted;i++){
-        if(arr[i]<min){
+        if(arr[i]>min){
             min=arr[i];
             start_of_unsorted = i;
         }
     }
 
-    //find e+1 to n-1 if smthing more than max, if so expand e
+    //find e+1 to n-1 if smthing lesser than max, if so expand end_of_unsorted
     for(int i=end_of_unsorted+1;i<size;i++){
-        if(arr[i]>max){
+        if(arr[i]<max){
             max = arr[i];
             end_of_unsorted=i;
         }
@@ -61,7 +61,7 @@ void printUnsorted(int arr[], int size){
 }
 
 int main(){
-    int arr[] = {20, 30, 25, 40, 32, 31, 35, 50, 60};
+    int arr[] = {10, 20, 5, 6, 30, 40};
     int arr_size = sizeof(arr)/sizeof(arr[0]);
     printUnsorted(arr, arr_size);
     return 0;    

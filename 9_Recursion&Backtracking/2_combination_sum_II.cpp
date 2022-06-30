@@ -10,7 +10,7 @@ public:
                 continue;
             }
             if(target<candidates[i]){
-                break;
+                break; // arr is sorted, so if arr[i] is greater, then all elements from a[i+1] should be greater, so return false
             }
             ds.push_back(candidates[i]);
             findCombinations(i+1, candidates, target-candidates[i], ds, ans);
@@ -18,7 +18,7 @@ public:
         }
     }
     vector<vector<int>> combinationSum2(vector<int>& candidates, int target) {
-        sort(candidates.begin(), candidates.end());
+        sort(candidates.begin(), candidates.end()); // sorting is done to prevent duplicates
         vector<vector<int>> ans;
         vector<int> ds;
         findCombinations(0, candidates, target, ds, ans);

@@ -1,8 +1,30 @@
-#include<bits/stdc++.h>
-using namespace std;
+#include<bits/stdc++.h> 
+using namespace std; 
 
-void countSort(int arr[], int n)
-{
+void countSort(int arr[], int n, int k) 
+{ 
+    int count[k];
+    for(int i=0;i<k;i++)
+        count[i]=0;
+    for(int i=0;i<n;i++)
+        count[arr[i]]++;
+        
+    for(int i=1;i<k;i++)
+        count[i]=count[i-1]+count[i];
+    
+    int output[n];
+    for(int i=n-1;i>=0;i--){
+        output[--count[arr[i]]]=arr[i];
+    }
+    for(int i=0;i<n;i++)
+        arr[i]=output[i];
+    
+} 
+  
+int main() 
+{ 
+    int arr[] = { 1,4,4,1,0,1 }; 
+    int n = sizeof(arr) / sizeof(arr[0]); 
     int max=arr[0];
     int min=arr[0];
     int b[n];
@@ -13,30 +35,11 @@ void countSort(int arr[], int n)
         if(arr[i]<min)
             min=arr[i];
     }
-    int count[max]={0};
-    for(int i=0;i<n;i++)
-    {
-        ++count[arr[i]];
-    }
-    for(int i=1;i<=max;i++)
-    {
-        count[i]+=count[i-1];
-    }
-    for(int i=0;i<n;i++)
-    {
-        b[--count[arr[i]]]=arr[i];
-    }
-    for(int i=0;i<n;i++)
-    {
-       arr[i]=b[i];
-    }
-}
-
-int main(){
-    int arr[] = { 1,4,4,1,0,1 }; 
-    int n = sizeof(arr) / sizeof(arr[0]); 
-    countSort(arr, n );   
+    int k = max;
+    countSort(arr, n, k); 
+   
     for (int i = 0; i < n; i++) 
-        cout << arr[i] << " ";       
-    return 0;   
-}
+        cout << arr[i] << " ";
+        
+    return 0; 
+} 

@@ -7,7 +7,7 @@ public:
         }
         for(int i=0;i<nums.size();i++){ // it is not subset or subsequence finding problem, so that's why we started from 0 instead of some index
             if(!um[i]){
-                um[i] = 1;
+                um[i] = 1; // this map is used to check whether that index had been taken or not
                 ds.push_back(nums[i]);
                 findPermutations(nums, ds, result, um);
                 ds.pop_back();

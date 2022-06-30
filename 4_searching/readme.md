@@ -12,7 +12,7 @@
 Approach : First do binary search and find the element, then traverse left side of it and right side of it to get its count.
 10. [Find a Fixed Point (Value equal to index) in a given array](https://www.geeksforgeeks.org/find-a-fixed-point-in-a-given-array/)
 11. [Find the maximum element in an array which is first increasing and then decreasing](https://www.geeksforgeeks.org/find-the-maximum-element-in-an-array-which-is-first-increasing-and-then-decreasing/)
-12. Median of two sorted arrays of unequal sizes
+12. Median of two sorted arrays of unequal sizes - [youtube](https://youtu.be/nv7F4PiLUzo)
 13. [Find the minimum element in a sorted and rotated array](https://www.geeksforgeeks.org/find-minimum-element-in-a-sorted-and-rotated-array/)
 14. [Search an element in a sorted and rotated array](https://www.geeksforgeeks.org/search-an-element-in-a-sorted-and-pivoted-array/)
 15. [Find position of an element in a sorted array of infinite numbers](https://www.geeksforgeeks.org/find-position-element-sorted-array-infinite-numbers/)

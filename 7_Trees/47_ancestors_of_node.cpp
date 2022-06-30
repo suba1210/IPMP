@@ -1,22 +1,25 @@
-    bool func(struct Node *root, int target, vector<int>& result){
-        if(root==NULL)
-            return false;
-        
-        if(root->data==target){
-            return true;
-        }
-        
-        if(func(root->left, target, result) || func(root->right, target, result)){
-            result.push_back(root->data);
-            return true;
-        }        
-        
+bool func(struct Node *root, int target, vector<int> &result)
+{
+    if (root == NULL)
         return false;
-    }
-    
-    vector<int> Ancestors(struct Node *root, int target)
+
+    if (root->data == target)
     {
-        vector<int> result;
-        func(root, target, result);
-        return result;
+        return true;
     }
+
+    if (func(root->left, target, result) || func(root->right, target, result))
+    {
+        result.push_back(root->data);
+        return true;
+    }
+
+    return false;
+}
+
+vector<int> Ancestors(struct Node *root, int target)
+{
+    vector<int> result;
+    func(root, target, result);
+    return result;
+}
