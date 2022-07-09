@@ -1,3 +1,4 @@
+// In this problem the size of the ft is 1 + max element, here we store numbers like hash
 
 class FenwickTree{
 public:

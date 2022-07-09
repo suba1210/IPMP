@@ -21,10 +21,10 @@ public:
                     q.push(t->right);
                 }
                 if(count == i+1){
-                    t->next = NULL;
+                    t->nextRight = NULL;
                 }
                 else{
-                    t->next = q.front();
+                    t->nextRight = q.front();
                 }
             }
         }
@@ -42,12 +42,12 @@ public:
             Node* n = temp;
             
             while(true){
-                n->left->next = n->right;
-                if(n->next == NULL){
+                n->left->nextRight = n->right;
+                if(n->nextRight == NULL){
                     break;
                 }
-                n->right->next = n->next->left;
-                n = n->next;
+                n->right->nextRight = n->nextRight->left;
+                n = n->nextRight;
             }
             temp = temp->left;
             

@@ -127,3 +127,10 @@ Node* flatten(Node *root)
     return root;
 }
 // main algorithm - end
+/*
+					1
+				/	  \
+			   3       4
+			  / \     / \ 
+			 6   7    5  9
+*/

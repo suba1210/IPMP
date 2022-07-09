@@ -13,7 +13,8 @@
 11. [Renaming Cities](https://practice.geeksforgeeks.org/problems/renaming-cities28581833/0/)
 12. [Print all words matching a pattern in CamelCase Notation Dictionary](https://www.geeksforgeeks.org/print-words-matching-pattern-camelcase-notation-dictonary/)
 13. [Most frequent word in an array of strings](https://practice.geeksforgeeks.org/problems/most-frequent-word-in-an-array-of-strings3528/0/) - insert every string into the trie and count occurences, then traverse the trie and find max count
-
+14. [Word Serch II](https://leetcode.com/problems/word-search-ii/)
+15. [Max Distance](https://leetcode.com/discuss/interview-question/350363/google-oa-2018-max-distance) - [also](https://leetcode.com/playground/Yw5YVezN) - Trie + DFS
 
 To do :
 

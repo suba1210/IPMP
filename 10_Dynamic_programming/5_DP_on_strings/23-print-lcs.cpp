@@ -60,9 +60,8 @@ void lcs(string s1, string s2)
 
 int main()
 {
-
-    string s1 = "abcde";
-    string s2 = "bdgek";
+    string s1= "abcjklp";
+    string s2= "acjkp";
 
     cout << "The Longest Common Subsequence is ";
     lcs(s1, s2);

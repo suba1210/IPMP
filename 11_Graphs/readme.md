@@ -39,6 +39,7 @@
 26. [Jump Game III](https://leetcode.com/problems/jump-game-iii/)
 27. [Word Ladder](https://leetcode.com/problems/word-ladder/)
 28. [Minimum Genetic Mutation](https://leetcode.com/problems/minimum-genetic-mutation/) - same logic as previous
+34. [Shortest Path in a Grid with Obstacles Elimination](https://leetcode.com/problems/shortest-path-in-a-grid-with-obstacles-elimination/)
 
 **Graph Theory Applications**
 

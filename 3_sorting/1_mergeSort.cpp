@@ -1,29 +1,35 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-void merge(int a[], int left, int mid, int right){
-    int leftSize = mid-left+1, rightSize = right-mid;
-    int leftPart[leftSize], rightPart[rightSize];
+void merge(int arr[], int left, int mid, int right){
 
-    for(int i=0; i<leftSize; i++){
-        leftPart[i] = a[left+i];
+    vector<int> leftArray, rightArray;
+
+    for(int i=left; i<=mid; i++){
+        leftArray.push_back(arr[i]);
     }
-    for(int i=0; i<rightSize; i++){
-        rightPart[i] = a[mid+1+i];
+
+    for(int i=mid+1; i<=right; i++){
+        rightArray.push_back(arr[i]);
     }
-    int i=0, j=0, k=left;
+
+    int leftSize = leftArray.size(), rightSize = rightArray.size();
+    int i=0, j=0, index=left;
+
     while(i<leftSize && j<rightSize){
-        if(leftPart[i] < rightPart[j]){
-            a[k++] = leftPart[i++];
+        if(leftArray[i] < rightArray[j]){
+            arr[index++] = leftArray[i++];
         } else {
-            a[k++] = rightPart[j++];
+            arr[index++] = rightArray[j++];
         }
     }
+
     while(i<leftSize){
-        a[k++] = leftPart[i++];
+        arr[index++] = leftArray[i++];
     }
+
     while(j<rightSize){
-        a[k++] = rightPart[j++];
+        arr[index++] = rightArray[j++];
     }
 
 }
@@ -38,7 +44,7 @@ void mergeSort(int a[], int left, int right){
 }
 
 int main(){
-    int a[]={10,5,30,15,7};
+    int a[]={10, 3, 1, 9, 15, 5};
     int size = sizeof(a)/sizeof(a[0]);
 	int l=0,r=size-1;
 	

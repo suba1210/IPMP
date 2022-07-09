@@ -2,7 +2,7 @@
 class Solution {
 public:
     int allWays(int index, bool canBuy, int transactions, vector<int>& prices)
-{
+    {
         if(transactions==0)
             return 0;
         if(index==prices.size())

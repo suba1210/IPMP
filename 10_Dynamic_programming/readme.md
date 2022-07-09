@@ -91,3 +91,5 @@
 - [ ] 54. [Egg Droping puzzle](https://www.geeksforgeeks.org/egg-dropping-puzzle-dp-11/)
 - [ ] 55. [Optimal BST](https://www.geeksforgeeks.org/optimal-binary-search-tree-dp-24/)
 - [ ] 56. [Find if a string is interleaved of two other strings](https://www.geeksforgeeks.org/find-if-a-string-is-interleaved-of-two-other-strings-dp-33/)
+- [x] 57. [Pots of Gold game](https://practice.geeksforgeeks.org/problems/pots-of-gold-game/1/)
+- [x] 58. [Minimum Operations to Make a Subsequence](https://leetcode.com/problems/minimum-operations-to-make-a-subsequence/) => LCS to LIS optimisation
