@@ -1,6 +1,8 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+// in max-heap => smaller half is maintained
+// in min-heap => larger half is maintained
 
 
 class Solution
