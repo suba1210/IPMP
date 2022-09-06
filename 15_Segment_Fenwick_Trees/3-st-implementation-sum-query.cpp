@@ -37,7 +37,7 @@ public:
         return left + right;       
     }
 
-    void pointUpdate(int ind, int low, int high, int targetInd, int value, vector<int>& arr){
+    void pointUpdate(int ind, int low, int high, int targetInd, int value){
         if(low==high){
             sTree[ind] = value;
             return;
@@ -45,9 +45,9 @@ public:
         int mid = (low + high)/2;
 
         if(targetInd <= mid){
-            pointUpdate(2*ind+1, low, mid, targetInd, value, arr);
+            pointUpdate(2*ind+1, low, mid, targetInd, value);
         } else {
-            pointUpdate(2*ind+2, mid+1, high, targetInd, value, arr);
+            pointUpdate(2*ind+2, mid+1, high, targetInd, value);
         }
         sTree[ind] = sTree[2*ind+1] + sTree[2*ind+2];
     }
@@ -61,6 +61,6 @@ int main(){
     SegmentTreeSumQuery st(size);
     st.build(0, 0, size-1, arr);
     cout<<st.query(0, 0, size-1, 1, 4)<<" ";
-    st.pointUpdate(0, 0, size-1, 3, 8, arr);
+    st.pointUpdate(0, 0, size-1, 3, 8);
     cout<<st.query(0, 0, size-1, 1, 4)<<" ";
 }

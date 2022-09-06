@@ -117,20 +117,12 @@ public:
                                 {
                                     value = max(value, grid[i][j1] + dp[i + 1][j1 + dj1][j2 + dj2]);
                                 }
-                                else
-                                {
-                                    value = max(value, (int)(-1e8));
-                                }
                             }
                             else
                             {
                                 if (j1 + dj1 < col && j1 + dj1 >= 0 && j2 + dj2 < col && j2 + dj2 >= 0)
                                 {
                                     value = max(value, grid[i][j1] + grid[i][j2] + dp[i + 1][j1 + dj1][j2 + dj2]);
-                                }
-                                else
-                                {
-                                    value = max(value, (int)(-1e8));
                                 }
                             }
                         }
