@@ -5,21 +5,21 @@
 3. [Find the Missing Number in the range](https://www.geeksforgeeks.org/find-the-missing-number/)
 4. [Find the two non-repeating elements in an array of repeating elements/ Unique Numbers 2](https://www.geeksforgeeks.org/find-two-non-repeating-elements-in-an-array-of-repeating-elements/)
 5. [Find the two numbers with odd occurrences in an unsorted array](https://www.geeksforgeeks.org/find-the-two-numbers-with-odd-occurences-in-an-unsorted-array/)
-6. [Given a number, find the next smallest palindrome](https://www.geeksforgeeks.org/given-a-number-find-next-smallest-palindrome-larger-than-this-number/) - have to do again
+6. [Given a number, find the next smallest palindrome](https://www.geeksforgeeks.org/given-a-number-find-next-smallest-palindrome-larger-than-this-number/)
 7. [Find next greater number with same set of digits](https://www.geeksforgeeks.org/find-next-greater-number-set-digits/)
-8. [find the next higher permutation of the given number as an array of digits](https://practice.geeksforgeeks.org/problems/next-permutation5226/1) - have to do again
+8. [find the next higher permutation of the given number as an array of digits](https://practice.geeksforgeeks.org/problems/next-permutation5226/1)
 9. [Find pair of numbers with given sum X](https://www.geeksforgeeks.org/given-an-array-a-and-a-number-x-check-for-pair-in-a-with-sum-as-x/)
 10. [Find a,b,c such that a^2+b^2=c^2](https://www.geeksforgeeks.org/count-number-of-triplet-pairs-a-b-c-such-that-a2-b2-c2-and-1/)
-11. [Find four elements that sum to a given value](https://www.geeksforgeeks.org/find-four-elements-that-sum-to-a-given-value-set-2/) - also implemented by hashing
+11. [Find four elements that sum to a given value](https://www.geeksforgeeks.org/find-four-elements-that-sum-to-a-given-value-set-2/) 
 12. [Find two repeating elements in a given array](https://www.geeksforgeeks.org/find-the-two-repeating-elements-in-a-given-array/)
 13. [Find the 3 elements such that a[i] < a[j] < a[k] and i < j < k](https://www.geeksforgeeks.org/find-a-sorted-subsequence-of-size-3-in-linear-time/)
 14. [Find the least positive number missing in an unsorted array.](https://www.geeksforgeeks.org/find-the-smallest-positive-number-missing-from-an-unsorted-array/)
 15. [Find the row with maximum number of 1s](https://www.geeksforgeeks.org/find-the-row-with-maximum-number-1s/)
 16. [Find Maximum difference between two elements such that the larger element appears after the smaller element in array](https://www.geeksforgeeks.org/maximum-difference-between-two-elements/)
 17. [Two elements whose sum is closest to zero](https://www.geeksforgeeks.org/two-elements-whose-sum-is-closest-to-zero/)
-18. [Find the first subarray which has a zero sum in an array](https://www.geeksforgeeks.org/find-if-there-is-a-subarray-with-0-sum/) - Better to use Hashing 
-19. [Find duplicates in O(n) time](https://www.geeksforgeeks.org/find-duplicates-in-on-time-and-constant-extra-space/) - Better to use Hashing
-20. [Find points in an array where left-sum==right-sum (Equilibrium of the array)](https://www.geeksforgeeks.org/equilibrium-index-of-an-array/) - have to solve similiar probs
+18. [Find the first subarray which has a zero sum in an array](https://www.geeksforgeeks.org/find-if-there-is-a-subarray-with-0-sum/) 
+19. [Find duplicates in O(n) time](https://www.geeksforgeeks.org/find-duplicates-in-on-time-and-constant-extra-space/)
+20. [Find points in an array where left-sum==right-sum (Equilibrium of the array)](https://www.geeksforgeeks.org/equilibrium-index-of-an-array/)
 21. [Search a number in a row wise and column wise sorted 2D matrix](https://www.geeksforgeeks.org/search-in-row-wise-and-column-wise-sorted-matrix/)
 22. [Print matrix spirally](https://www.geeksforgeeks.org/print-a-given-matrix-in-spiral-form/) - [youTube](https://www.youtube.com/watch?v=TmweBVEL0I0)
 23. [Measure amount of water in j’th glass of i’th row of glasses arranged like a pyramid](http://www.geeksforgeeks.org/find-water-in-a-glass/) 
@@ -39,14 +39,14 @@
 37. [Rotate an array by d elements](https://www.geeksforgeeks.org/array-rotation/)
 38. [Largest Sum Contiguous Subarray - Kadane Algorithm](https://www.geeksforgeeks.org/largest-sum-contiguous-subarray/)
 39. [Maximum Product Subarray](https://www.geeksforgeeks.org/maximum-product-subarray/)
-40. [Maximum Length Bitonic Subarray](https://www.geeksforgeeks.org/maximum-length-bitonic-subarray/) - have to do efficient sol again
+40. [Maximum Length Bitonic Subarray](https://www.geeksforgeeks.org/maximum-length-bitonic-subarray/)
 41. [Find continous subarray with given sum](https://www.geeksforgeeks.org/find-subarray-with-given-sum-in-array-of-integers/)
 42. [Largest subarray with equal number of 0s and 1s](https://www.geeksforgeeks.org/largest-subarray-with-equal-number-of-0s-and-1s/) - [youtube](https://www.youtube.com/watch?v=9ZyLjjk536U)
 43. [Maximum subsequence sum such that no two elements are adjacent](https://www.geeksforgeeks.org/maximum-sum-such-that-no-two-elements-are-adjacent/)
 44. [Maximum subsequence sum such that no two elements are adjacent](http://www.geeksforgeeks.org/maximum-sum-such-that-no-two-elements-are-adjacent/)
 45. [Find the majority element (with frequency > N/2)](https://www.geeksforgeeks.org/majority-element/) - [youtube](https://www.youtube.com/watch?v=n5QY3x_GNDg)
 46. [Find the maximum repeating number](https://www.geeksforgeeks.org/find-the-maximum-repeating-number-in-ok-time/) - [youtube](https://www.youtube.com/watch?v=iiYc32-4ZJY)
-47. [Count the number of Inversions in an array](https://www.geeksforgeeks.org/counting-inversions/) - by merge sort implementation
+47. [Count the number of Inversions in an array](https://www.geeksforgeeks.org/counting-inversions/)
 48. [Find kth smallest element](http://www.geeksforgeeks.org/k-largestor-smallest-elements-in-an-array/)
 49. [Stock Buy Sell to Maximize Profit](https://www.geeksforgeeks.org/stock-buy-sell/)
 50. [Print the elements greater than all the elements to its right](https://www.geeksforgeeks.org/leaders-in-an-array/)

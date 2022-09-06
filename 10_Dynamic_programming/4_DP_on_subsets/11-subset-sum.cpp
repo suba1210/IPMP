@@ -6,7 +6,7 @@ public:
             return true;
         if(index==0)
             return arr[0]==sum;
-        bool pick = findAllSubsets(index-1, sum-arr[0], arr);
+        bool pick = findAllSubsets(index-1, sum-arr[index], arr);
         bool notPick = findAllSubsets(index-1, sum, arr);
         
         return pick || notPick;
@@ -26,7 +26,7 @@ public:
             return arr[0]==sum;
         if(dp[index][sum]!=-1)
             return dp[index][sum];
-        bool pick = findAllSubsets(index-1, sum-arr[0], arr, dp);
+        bool pick = findAllSubsets(index-1, sum-arr[index], arr, dp);
         bool notPick = findAllSubsets(index-1, sum, arr, dp);
         
         return dp[index][sum] = pick || notPick;

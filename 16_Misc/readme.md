@@ -1,0 +1,1 @@
+1. [Next Closest Time](https://www.lintcode.com/problem/862/) - [also](https://aaronice.gitbook.io/lintcode/string/next-closest-time)

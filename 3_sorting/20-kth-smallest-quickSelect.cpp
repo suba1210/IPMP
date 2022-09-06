@@ -31,5 +31,6 @@ int quickSelect(vector<int> &arr, int left, int right, int k)
 int main()
 {
     vector<int> arr = {3, 6, 1, 10, 2, 12};
-    cout<<quickSelect(arr, 0, arr.size() - 1, 2)<<endl;
+    int k=3;
+    cout<<quickSelect(arr, 0, arr.size() - 1, k-1)<<endl;
 }
