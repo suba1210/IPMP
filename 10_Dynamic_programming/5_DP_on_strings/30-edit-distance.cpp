@@ -13,7 +13,7 @@ public:
             return i+1; // if word2 gets exhausted delete i+1 characters
         if(word1[i]==word2[j])
             return allWays(i-1, j-1, word1, word2);
-        return min(1+allWays(i-1, j-1, word1, word2), min(1+allWays(i, j-1, word1, word2), 1 + allWays(i-1, j, word1, word2)));
+        return 1 + min(allWays(i-1, j-1, word1, word2), min(allWays(i, j-1, word1, word2), allWays(i-1, j, word1, word2)));
     }
 
     int minDistance(string word1, string word2) {

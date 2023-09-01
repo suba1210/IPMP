@@ -13,11 +13,11 @@ public:
   }
   bool wildcardMatchingUtil(string &S1, string &S2, int i, int j, vector<vector<int>> &dp)
   {
-    if (i < 0 && j < 0) // we have exhauseted all characters of pattern and string
+    if (i < 0 && j < 0) // we have exhausted all characters of pattern and string
       return true;
-    if (i < 0 && j >= 0) // we have exhauseted all characters of pattern but have some characters in string
+    if (i < 0 && j >= 0) // we have exhausted all characters of pattern but have some characters in string
       return false;
-    if (j < 0 && i >= 0) // we have exhauseted all characters of string but have some in pattern, so check if remaining characters of pattern are all stars
+    if (j < 0 && i >= 0) // we have exhausted all characters of string but have some in pattern, so check if remaining characters of pattern are all stars
       return isAllStars(S1, i);
 
     if (dp[i][j] != -1)

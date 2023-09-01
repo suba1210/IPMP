@@ -1,11 +1,13 @@
 class Solution {
 public:
-    uint32_t reverseBits(uint32_t n) {
-        uint32_t ans = 0;
-        for(int i=0;i<=31;i++){
-            uint32_t setBit = n&(1<<i);
-            ans |= setBit << (31-i);
+    unsigned int reverseBits(unsigned int num) {
+        unsigned int NO_OF_BITS = sizeof(num) * 8;
+        unsigned int reverse_num = 0;
+        int i;
+        for (i = 0; i < NO_OF_BITS; i++) {
+            if ((num & (1 << i)))
+                reverse_num |= 1 << ((NO_OF_BITS - 1) - i);
         }
-        return ans;
+        return reverse_num;
     }
 };

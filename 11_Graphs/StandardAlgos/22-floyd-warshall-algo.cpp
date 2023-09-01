@@ -16,7 +16,7 @@ void floydWarshall(vector<vector<int> > graph, int V){
     for(i=0;i<V;i++){
         for(j=0;j<V;j++){
             for(k=0;k<V;k++){
-                if((dist[i][k]+dist[k][j] < dist[i][j]) && (dist[i][k]!=INF && dist[k][j]!=INF)){
+                if((dist[i][k]!=INF && dist[k][j]!=INF) && (dist[i][k]+dist[k][j] < dist[i][j])){
                     dist[i][j] = dist[i][k] + dist[k][j];
                 }
             }

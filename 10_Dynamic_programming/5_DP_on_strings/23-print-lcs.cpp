@@ -33,11 +33,7 @@ void lcs(string s1, string s2)
     int j = m;
 
     int index = len - 1;
-    string str = "";
-    for (int k = 1; k <= len; k++)
-    {
-        str += "$"; // dummy string
-    }
+    string str(len);
 
     while (i > 0 && j > 0)
     {

@@ -22,7 +22,7 @@ public:
                 int nextDist = x.second;
 				if(dist[next] > prevDist + nextDist){
                     dist[next] = prevDist + nextDist;
-                    pq.push({dist[next], x.first});   
+                    pq.push({dist[next], next});   
                 }
             }
         }

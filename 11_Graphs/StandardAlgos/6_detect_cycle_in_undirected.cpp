@@ -7,7 +7,10 @@ bool dfsRecur(int src, int parent, vector<bool>& visited, vector<int> adj[]){
         if(!visited[x]){
             if(dfsRecur(x, src, visited, adj))
                 return true;
-        } else if(x!=parent) {
+        // If an adjacent vertex is visited and
+        // is not parent of current vertex,
+        // then there exists a cycle in the graph.
+        } else if(x!=parent) { 
             return true;
         }
     }

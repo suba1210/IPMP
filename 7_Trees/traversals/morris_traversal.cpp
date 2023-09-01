@@ -16,7 +16,7 @@ void MorrisTraversalInorder(struct tNode *root)
         if (root->left == NULL)
         {
             cout << root->data << " ";
-            root = root->right;
+            root = root->right; // go to the connection
         }
         else
         {
@@ -36,7 +36,7 @@ void MorrisTraversalInorder(struct tNode *root)
             {
                 cout << root->data << " ";
                 prev->right = NULL;
-                root = root->right; // go to the connection
+                root = root->right; 
             }
         }
     }

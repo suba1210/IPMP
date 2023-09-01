@@ -6,9 +6,11 @@ public:
             return 1;
         if(i<0) // we have used all charcters of s1 but still couldn't find a match for s2
             return 0;
+        int match = 0, nonMatch = 0;
         if(s[i]==t[j])
-            return allWays(i-1, j-1, s, t) + allWays(i-1, j, s, t);
-        return allWays(i-1, j, s, t);
+            match = allWays(i-1, j-1, s, t);
+        nonMatch = allWays(i-1, j, s, t);
+        return match + nonMatch;
     }
     int numDistinct(string s, string t) {
         return allWays(s.length()-1, t.length()-1, s, t);
